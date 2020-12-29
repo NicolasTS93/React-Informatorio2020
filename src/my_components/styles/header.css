@@ -1,0 +1,87 @@
+*{
+    margin: 0;
+    padding:0;
+    box-sizing: border-box;
+}
+
+#header{
+margin: 0px;
+display: flex;
+flex-direction: column;
+font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
+width: 100%;
+/* background*/
+background: linear-gradient(rgba(0,0,0,0.7),rgba(114, 114, 114, 0.7)),url("../pictures/back_title.jpg");
+background-repeat: no-repeat;
+background-position: center;
+background-size: cover;
+background-attachment: fixed;
+text-align: center;
+}
+
+/* Barra de navegacion */
+#nav{
+    
+    height: 40px;
+    display:flex;
+    justify-content: flex-end;
+    align-items: stretch;
+    position:sticky;
+    top:0;
+}
+
+#items{
+    width: 45%;
+    list-style: none;
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-around;
+}
+
+#items > li{
+    display: flex;
+    align-items: center;
+}
+
+#items > li > *{    
+    
+    text-decoration: none;
+    color: white;
+}
+
+#inp_search{
+    font-size: large;
+    width: 250px;
+    height: 100%;
+    border: none;
+}
+
+#btn_search{
+    margin-left: 0;
+    background: none;
+    height: 30px;
+    width: 30px;
+    border: none;
+}
+
+/* Titulo principal */
+#cont_title{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 100%;
+    height: 350px;
+    background-image: "../pictures/back_title.jpg";
+}
+
+.title{
+    color: #FFFFFF;
+}
+
+#text{
+    color: #6B7482;
+}
+
+#bar{
+    list-style: none;
+}

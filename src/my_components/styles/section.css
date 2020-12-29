@@ -1,0 +1,51 @@
+#section{
+    width: auto;
+    display: grid;
+    grid-template-columns: repeat(4,1fr);
+    row-gap: 2em;
+    justify-items: center;
+    margin: 27px 0px;
+}
+
+/* Articulos */
+#article{
+    margin: 0;
+    width: 300px;
+    font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
+    background-color: #F7F7F7;
+    display: flex;
+    flex-flow: column nowrap;
+}
+
+#title{
+    color:#4C4046;
+    font-size: 17px;
+    font-weight: 700;
+    margin: 15px 6px;
+}
+
+#text{
+    margin: 0px 6px;
+}
+
+/*Responsiv*/
+@media(max-width: 1290px){
+    #section{
+        grid-template-columns: repeat(3, 1fr);
+    }
+
+} 
+
+@media(max-width: 950px){
+    #section{
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+} 
+
+@media(max-width: 650px){
+    #section{
+        grid-template-columns:1fr;
+    }
+
+} 
