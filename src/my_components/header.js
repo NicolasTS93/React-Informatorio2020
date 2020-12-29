@@ -14,7 +14,7 @@ const Navbar  = ()=>(
             <li><a id="twitter" href="https://www.twitter.com"></a></li>
             <li><a href="#world"></a></li>
         </ul>  
-        <button type="button" class="icon-burger"></button>
+        
     </nav>
 );
 

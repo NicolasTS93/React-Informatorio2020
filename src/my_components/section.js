@@ -1,8 +1,20 @@
-import {Component} from 'react';
+import React, {Component, useEffect, useState} from 'react';
 import img from "./pictures/imagen1.png" 
 import './styles/section.css'
 
-const Article = ()=>(
+const Article = ()=>{
+    const url = 'https://jsonplaceholder.typicode.com/todos';
+    const [todos, setTodos] = useState();
+    const fetchApi = async()=>{
+        const response = await fetch(url);
+        const responseJSON = await response.json();
+        setTodos(responseJSON);
+    }
+    useEffect (()=>{
+        fetchApi();
+    },[]);
+    
+    return(
     <div id="article">
         <img src={img}></img>
         <h3 id="title">I like the body. I like to desing everything to do with the body.</h3>
@@ -12,25 +24,30 @@ const Article = ()=>(
             illum, soluta repudiandae temporibus 
             voluptatem similique. Porro, reiciendis! Odio obcaecati porro officiis.
         </p>
-
+        <ul>
+            {!todos ? 'Cargando...': 
+                todos.map((todo, index)=>{
+                    return<li key={index}>{todo.title}</li>
+                })
+            }
+        </ul>
     </div>
-
-);
-class Section extends Component{
-render(){
-    return(
-        <section id="section">
-            <Article/>
-            <Article/>
-            <Article/>
-            <Article/>
-            <Article/>
-            <Article/>
-            <Article/>
-            <Article/>
-        </section>
     )
+
 };
+class Section extends Component{
+
+    render(){
+        return(
+            <section id="section">
+                <Article/>
+                <Article/>
+                <Article/>
+                <Article/>
+                
+            </section>
+        )
+    };
 
 }
 
